@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/charl/Downloads/index_5.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UW–Madison - Then Vs Now</title>
+<link href="./index33_files/css2" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #e8e3d8;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    background:
+      radial-gradient(ellipse at top, rgba(80,40,30,0.4), transparent 70%),
+      #0f0f0f;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 9vw, 110px);
+    font-weight: 500;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+  }
+  .hero .subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 50px;
+  }
+  .hero blockquote {
+    max-width: 640px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.4vw, 26px);
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 16px;
+  }
+  .hero cite {
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+  .scroll-hint {
+    margin-top: 80px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    text-transform: uppercase;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* ====== INTRO ====== */
+  .intro {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 24px;
+  }
+  .intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    opacity: 0.92;
+  }
+  .intro p.lead::first-letter {
+    font-size: 64px;
+    float: left;
+    line-height: 1;
+    padding: 6px 12px 0 0;
+    font-weight: 600;
+  }
+
+  /* ====== STOPS ====== */
+  .stop {
+    padding: 80px 24px;
+    border-top: 1px solid rgba(232, 227, 216, 0.1);
+  }
+  .stop-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .stop-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    margin-bottom: 8px;
+  }
+  .stop h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 500;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .stop .location {
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  .img-block { position: relative; }
+  .img-label {
+    position: absolute;
+    top: 14px; left: 14px;
+    background: rgba(15, 15, 15, 0.85);
+    color: #e8e3d8;
+    padding: 6px 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .img-block img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    background: #1a1a1a;
+  }
+  .img-block.then img {
+    filter: grayscale(100%) contrast(1.1) sepia(0.15);
+  }
+  .img-block .placeholder {
+    width: 100%;
+    height: 380px;
+    background: #1a1a1a;
+    border: 1px dashed rgba(232, 227, 216, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    text-transform: uppercase;
+  }
+  .img-caption {
+    font-size: 11px;
+    opacity: 0.5;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .stop-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .stop-body p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.7;
+    opacity: 0.92;
+  }
+  .stop-body blockquote {
+    border-left: 2px solid #c0392b;
+    padding: 4px 0 4px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+  .stop-body blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+
+  /* ====== FOOTER ====== */
+  .reflection {
+    padding: 120px 24px 60px;
+    background: linear-gradient(to bottom, transparent, rgba(80,40,30,0.2));
+    border-top: 1px solid rgba(232, 227, 216, 0.1);
+  }
+  .reflection-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .reflection h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .reflection p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    opacity: 0.9;
+  }
+  .colophon {
+    text-align: center;
+    padding: 40px 24px 60px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    text-transform: uppercase;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .images { grid-template-columns: 1fr; }
+    .stop-body { grid-template-columns: 1fr; gap: 24px; }
+    .img-block img, .img-block .placeholder { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Then Vs Now: UW - Madison</h1>
+  <div class="subtitle"></div>
+  <blockquote>
+    "The picture of it stays, and not just in my rememory, but out there, in the world."
+  </blockquote>
+  <cite>Sethe — Toni Morrison, <em>Beloved</em></cite>
+  <div class="scroll-hint">Created By Charlie Van Lyssel</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p class="lead">In <em>Beloved</em>, Sethe explains the concept of "rememory" as something that lives outside the mind, and rather in the world</p>
+  <p>This project is a walk through seven places on the UW–Madison campus. All seven of these locations represent how a place can exist in the world across generations, and change over time.</p>
+</section>
+
+<!-- ============ STOP 1 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">I</div>
+    <h2>Bascom Hall</h2>
+    <div class="location">Top of Bascom Hill · Built 1859</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · c. 1910</div>
+        <img src="images/01_bascom_then.jpg" alt="">
+        <div class="img-caption">Bascom Hall with its original dome. UW Archives.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/01_bascom_now.jpg" alt="">
+        <div class="img-caption">Bascom Hill in the modern day.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>For over 50 years, Bascom Hall had a tall dome that stood out over the city. A fire destroyed it on October 10, 1916. The university talked for years about rebuilding it, but it never happened. Bascom Hall has now gone longer without the dome than it ever had it, even though old postcards still show the original version.</p>
+      <blockquote>
+        "Some things you forget. Other things you never do. Places, places are still there."
+        <cite>Sethe, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 2 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">II</div>
+    <h2>Memorial Union Terrace</h2>
+    <div class="location">Lake Mendota Shore · Opened 1928</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · 1930s</div>
+        <img src="images/02_terrace_then.jpg" alt="">
+        <div class="img-caption">The Terrace opened to honor WWI veterans.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/02_terrace_now.jpg" alt="">
+        <div class="img-caption">Memorial Union Terrace in the modern day.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>Before Memorial Union was built, this shore was already part of Teejop, the Ho Chunk homeland. UW says this land has been Ho Chunk land since time immemorial. Memorial Union opened on October 5, 1928, as a memorial to UW men and women who served in the nation’s wars. The Terrace opened right after, and the famous sunburst chairs came later.</p>
+      <blockquote>
+        "Not a house in the country ain't packed to its rafters with some dead Negro's grief."
+        <cite>Baby Suggs, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 3 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">III</div>
+    <h2>Camp Randall</h2>
+    <div class="location">Monroe Street · Civil War Camp, 1861–65</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · 1860s</div>
+        <img src="images/04_camprandall_then.jpg" alt="">
+        <div class="img-caption">Camp Randall when it served as a Union training camp</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/04_camprandall_now.jpg" alt="">
+        <div class="img-caption">Camp Randall in modern day.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>Camp Randall sent about 70,000 Union soldiers into the Civil War. Many never made it home. In 1862, the site also held Confederate prisoners, and about 140 of them died and were buried at Forest Hill Cemetery in a section called Confederate Rest. The university later took over the land and built Camp Randall Stadium there in 1917.</p>
+      <blockquote>
+        "Disremembered and unaccounted for, she cannot be lost because no one is looking for her."
+        <cite>Beloved, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 5 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">IV</div>
+    <h2>Library Mall</h2>
+    <div class="location">Lower Campus · Reshaped Many Times</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · c. 1950</div>
+        <img src="images/06_libmall_then.jpg" alt="">
+        <div class="img-caption">Library Mall before the Fountain was built.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/06_libmall_now.jpg" alt="">
+        <div class="img-caption">Library mall in the modern day</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>The area south of Bascom Hill has not stayed the same for long. This part of campus has been rebuilt again and again. Memorial Library opened in 1953. Humanities came in 1969, and the university now plans to demolish it. The Mall has had several different lives.</p>
+      <blockquote>
+        "If a house burns down, it's gone, but the place — the picture of it — stays."
+        <cite>Sethe, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 7 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">V</div>
+    <h2>The Red Gym</h2>
+    <div class="location">Langdon Street · Built 1894 as an Armory</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · c. 1900</div>
+        <img src="images/08_redgym_then.jpg" alt="">
+        <div class="img-caption">The Armory and Gymnasium right after construction.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/08_redgym_now.jpg" alt="">
+        <div class="img-caption">The Red Gym in Modern Day.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>TThe Red Gym was built to be both a gym and an armory. After the Haymarket Riot in Chicago, Wisconsin legislators wanted a building in Madison that could help respond to unrest. That is why it was designed like a fortress. The turrets and towers are still there. The rifles are not. Now students go there for IDs and campus services instead.</p>
+      <blockquote>
+        "We flesh; flesh that weeps, laughs; flesh that dances on bare feet in grass. Love it. Love it hard."
+        <cite>Baby Suggs, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 9 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">VI</div>
+    <h2>Science Hall</h2>
+    <div class="location">North Park Street · Rebuilt 1887</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · c. 1888</div>
+        <img src="images/09_sciencehall_then.jpg" alt="">
+        <div class="img-caption">Science Hall shortly after it was rebuilt following the 1884 fire that destroyed the original.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/09_sciencehall_now.jpg" alt="">
+        <div class="img-caption">Modern Day Science Hall.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>This is not the first Science Hall. The original building burned in December 1884. The one that replaced it was built with fire in mind, using metal and masonry instead of the older design. It feels like the building still remembers what happened before it was built.</p>
+      <blockquote>
+        "Anything dead coming back to life hurts."
+        <cite>Amy Denver, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STOP 10 ============ -->
+<section class="stop">
+  <div class="stop-inner">
+    <div class="stop-number">VII</div>
+    <h2>State Street</h2>
+    <div class="location">From Library Mall to the Square</div>
+
+    <div class="images">
+      <div class="img-block then">
+        <div class="img-label">Then · c. 1925</div>
+        <img src="images/10_statestreet_then.jpg" alt="">
+        <div class="img-caption">State Street in the 1920s, when streetcars were allowed.</div>
+      </div>
+      <div class="img-block now">
+        <div class="img-label">Now</div>
+        <img src="images/10_statestreet_now.jpg" alt="">
+        <div class="img-caption">State street in the modern day.</div>
+      </div>
+    </div>
+
+    <div class="stop-body">
+      <p>State Street has always linked the university to the rest of Madison. Streetcars once ran down it, and during the Dow protests in October 1967, police rushed through this part of campus and used tear gas at the Commerce Building. Later, the same street held marches, vigils, parades, markets, and all the ordinary days in between. The Capitol has watched over it the whole time.</p>
+      <blockquote>
+        "It was not a story to pass on."
+        <cite>Narrator, Beloved</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- REFLECTION -->
+<section class="reflection">
+  <div class="reflection-inner">
+    <h3>Reflection</h3>
+    <p>I chose this project because it fits with my skillset of studying cartography and computer science. I felt like the evolution of the UW - Madison campus relates to <em>Beloved</em> as the past of the campus still affects what the buildings are used today. Combining these 2 topics together gives me a strong vision of how history can impact many people for generations in the future.
+</p>
+    <p>The hardest part of this project for me was planning out how to organize the webpage to be easy to read and send an effective message to the reader. It was also challenging to find some of the history about the campus, especially buildings that were built in the 1800’s. Lastly, finding a way to connect my topic to Beloved was initially challenging, but became more clear as I worked throughout the project.</p>
+    <p>What I am happiest about is how the website formatting turned out. It took a lot of work and fine tuning and I was able to get the theme that I was looking for. I really enjoyed researching and finding old pictures of campus and comparing to how they look in the modern day.</p>
+  </div>
+</section>
+
+
+<div class="colophon">
+  ENGL 169 · Spring 2026 · A Creative Project on <em>Beloved</em>
+</div>
+
+
+
+</body></html>
